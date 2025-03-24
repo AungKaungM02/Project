@@ -18,8 +18,8 @@ function Contact() {
   const [contactFormData, setContactFormData] = useState({
     name: "",
     email: "",
-    phoneNumber: "",
-    companyName: "",
+    phone: "",
+    company: "",
     country: "",
     message: "",
   });
@@ -107,8 +107,8 @@ function Contact() {
         setContactFormData({
           name: "",
           email: "",
-          phoneNumber: "",
-          companyName: "",
+          phone: "",
+          company: "",
           country: "",
           message: "",
         });
@@ -220,8 +220,8 @@ function Contact() {
                 </label>
                 <input
                   type="tel"
-                  name="phoneNumber"
-                  value={contactFormData.phoneNumber}
+                  name="phone"
+                  value={contactFormData.phone}
                   onChange={handleContactFormChange}
                   className="w-full rounded-md border-gray-300 shadow-sm focus:ring-purple-500"
                 />
@@ -233,8 +233,8 @@ function Contact() {
                 </label>
                 <input
                   type="text"
-                  name="companyName"
-                  value={contactFormData.companyName}
+                  name="company"
+                  value={contactFormData.company}
                   onChange={handleContactFormChange}
                   className="w-full rounded-md border-gray-300 shadow-sm focus:ring-purple-500"
                 />

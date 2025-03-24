@@ -10,8 +10,8 @@ function Demo() {
     company: "",
     country: "",
     interest: [] as string[],
-    date: "",
-    time: "",
+    preferredDate: "",
+    preferredTime: "",
   });
 
   const interestAreas = [
@@ -49,8 +49,8 @@ function Demo() {
             company: "",
             country: "",
             interest: [],
-            date: "",
-            time: "",
+            preferredDate: "",
+            preferredTime: "",
           });
         }, 3000);
       } else {
@@ -232,9 +232,12 @@ function Demo() {
                   <input
                     type="date"
                     required
-                    value={formData.date}
+                    value={formData.preferredDate}
                     onChange={(e) =>
-                      setFormData({ ...formData, date: e.target.value })
+                      setFormData({
+                        ...formData,
+                        preferredDate: e.target.value,
+                      })
                     }
                     min={new Date().toISOString().split("T")[0]}
                     className="w-full rounded-md border-gray-300 shadow-sm focus:border-purple-500 focus:ring-purple-500"
@@ -251,9 +254,12 @@ function Demo() {
                   <input
                     type="time"
                     required
-                    value={formData.time}
+                    value={formData.preferredTime}
                     onChange={(e) =>
-                      setFormData({ ...formData, time: e.target.value })
+                      setFormData({
+                        ...formData,
+                        preferredTime: e.target.value,
+                      })
                     }
                     className="w-full rounded-md border-gray-300 shadow-sm focus:border-purple-500 focus:ring-purple-500"
                   />
